@@ -1,9 +1,11 @@
-import React from 'react';
+import React from "react";
 
 function Header() {
   return (
     <div className="header">
-      <img src="" alt="" width="100px" height="50px" />
+      <div className="headerImg">
+        <img src="https://picsum.photos/100/50" alt="" width="100px" height="50px" />
+      </div>
       <div className="navItems">
         <a className="navItem" href="/mint">
           Mint

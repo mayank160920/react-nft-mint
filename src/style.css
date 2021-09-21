@@ -5,30 +5,132 @@ body {
   box-sizing: border-box;
 }
 
+:root {
+  --colorPrimary: black;
+  /* --colorSecondary : white; */
+  --colorSecondary: #96b4b9;
+}
+
 * {
   text-decoration: none;
-  color: white;
+  color: var(--colorSecondary);
+  background-color: var(--colorPrimary);
+  font-family: "Lato";
 }
 
 .wrapper {
   height: 100vh;
-  background-color: antiquewhite;
-  margin: 0px 50px;
+  margin: 0px 100px;
 }
 
+/* header */
 .header {
   height: 80px;
-  background-color: rebeccapurple;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  /* border */
+  border: 0px;
+  border-bottom: 5px;
+  border-style: dashed;
 }
 
 .navItems {
-
 }
 
 .navItem {
-  
+  margin: 0px 20px;
+  font-size: 1.3rem;
 }
+
+.navItem:hover {
+  color: white;
+}
+
+.headerImg > img {
+  margin: 0px 20px;
+  border-radius: 5px;
+}
+
+/* footer */
+.footer {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* border */
+  border: 0px;
+  border-top: 5px;
+  border-style: dashed;
+}
+
+.footerItems {
+  text-align: center;
+}
+
+/* mint-container */
+.mint-container {
+  height: calc(100vh - 170px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.mintImage {
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.mintImage:hover {
+}
+
+.mintBtn {
+  /* background-color: blue; */
+  border-radius: 5px;
+  font-size: 1.5rem;
+  margin: 10px;
+  padding: 10px 0px;
+  text-align: center;
+  width: 300px;
+}
+
+.mintBtn:hover {
+  cursor: pointer;
+  color: white;
+  /* transform: scale(1.05); */
+  /* font-size: 1.7rem; */
+}
+
+/* -- animated border gradient*/
+.border-gradient {
+  border: 5px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+}
+
+
+.mintBtn,
+.mintImage {
+  --angle: 0deg;
+  /* … */
+  /* border-image: linear-gradient(var(--angle), green, yellow) 1; */
+  border-image: conic-gradient(from var(--angle), red, yellow, lime, aqua, blue, magenta, red) 1;
+  animation: 2s rotate linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
