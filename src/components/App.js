@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { useEffect } from "react";
 
-import Header from './Header';
-import Footer from './Footer';
-import Mint from './Mint';
+import ParticleBg from "./ParticleBg";
+import Header from "./Header";
+import Footer from "./Footer";
+import Mint from "./Mint";
 
 export default function App() {
   return (
-    <div className="wrapper">
-      <Header />
-      <Mint />
-      <Footer />
-    </div>
+    <>
+      <ParticleBg />
+      <div className="wrapper">
+          <div className="subWrapper">
+            <Header />
+            <Mint />
+            <Footer />
+          </div>
+      </div>
+    </>
   );
 }
