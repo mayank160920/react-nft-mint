@@ -53,6 +53,12 @@ body {
 
 .navItem:hover {
   color: white;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(105, 121, 9, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
 }
 
 .headerImg > img {
@@ -114,7 +120,12 @@ body {
 .mintBtn:hover {
   cursor: pointer;
   color: white;
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(105,121,9,1) 35%, rgba(0,212,255,1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(105, 121, 9, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
 }
 
 /* -- animated border gradient*/
